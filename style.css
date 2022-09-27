@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    /* Primary colors */
+    --white: #FFF;
+    --blue: hsl(246, 80%, 60%);
+    --light-orange: hsl(15, 100%, 70%);
+    --soft-blue: hsl(195, 74%, 62%);
+    --light-red: hsl(348, 100%, 68%);
+    --lime-green: hsl(145, 58%, 55%);
+    --violet: hsl(264, 64%, 52%);
+    --soft-orange: hsl(43, 84%, 65%);
+
+    /* Neutral colors */
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    font-family: 'Rubik', sans-serif;
+    color: var(--pale-blue);
+}
+
+.main-container {
+    width: 328px;
+    margin: 77px auto;
+}
+
+.first-section {
+    /* border: 2px solid yellow; */
+    border-radius: 20px;
+    background-color: var(--dark-blue);
+}
+
+.main-card__user {
+    background-color: var(--blue);
+    border-radius: 20px;
+    display: flex;
+    padding: 20px;
+}
+
+.main-card__image {
+    width: 72px;
+    margin-right: 16px;
+    border: 3px solid var(--white);
+    border-radius: 50%;
+}
+
+.main-card__title {
+    font-size: 0.9em;
+    margin: 10px 0 4px;
+}
+
+.main-card__name {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--white);
+}
+
+.main-card__dates {
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 0;
+    font-size: 1.2em;
+    align-items: center;
+    color: var(--desaturated-blue);
+}
+
+.main-card__frequency--active {
+    color: var(--white);
+}
+
+.main-card__frequency:hover {
+    cursor: pointer;
+    color: var(--white);
+}
+
+/* Second section */
+.second-section {
+    display: grid;
+    /* padding: 12px 0 0; */
+}
+
+.card {
+    /* background-color: var(--light-orange); */
+    border-radius: 16px;
+    margin: 20px 0 0;
+    position: relative;
+    height: 150px;
+}
+
+.card__background {
+    border-radius: 16px 16px 0 0;
+    /* background-color: var(--light-orange); */
+    height: 80px;
+    overflow: hidden;
+}
+
+.card__image {
+    margin-top: -10px;
+    margin-left: 70%;
+}
+
+.card__details {
+    background-color: var(--dark-blue);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 75%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 25%;
+}
+
+.card__details:hover {
+    background-color: var(--desaturated-blue);
+    cursor: pointer;
+}
+
+.card__activity {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.card__title {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.card__activity img {
+    height: 0.25em;
+}
+
+.card__activity img:hover {
+    color: var(--white);
+}
+
+.card__hours {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px 0;
+    align-items: center;
+}
+
+.card__current {
+    font-size: 1.8em;
+    color: var(--white);
+}
+
+.card__previous {
+    font-size: 0.8em;
+}
+
+.attribution { 
+    font-size: 12px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1200px) {
+    .main-container {
+        width: 1000px;
+        display: flex;
+    }
+    .first-section {
+        width: 290px;
+    }
+
+    .main-card__user {
+        flex-direction: column;
+        padding: 20px;
+        height: 340px;
+    }
+
+    .main-card__image {
+        width: 85px;
+        margin-bottom: 45px;
+    }
+
+    .main-card__title {
+        font-size: 1em;
+    }
+
+    .main-card__name {
+        font-size: 2.2em;
+    }
+
+    .main-card__dates {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 10px 0 20px;
+    }
+
+    .main-card__frequency {
+        margin-left: 20px;
+        margin-top: 18px;
+        font-size: 0.8em;
+    }
+
+    .second-section {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 30px;
+        margin-left: 30px;
+    }
+
+    .card {
+        height: 100%;
+        top: -10px;
+        margin: 10px 0;
+    }
+
+    .card__image {
+        width: 100px;
+        margin-left: 50%;
+    }
+
+    .card__title {
+        font-size: 1em;
+    }
+
+    .card__hours {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card__current {
+        font-size: 3em;
+        margin-bottom: 4px;
+    }
+}
